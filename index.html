@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilvestaShop – Sklep Sylwestrowy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">SILVESTA<span>SHOP</span></div>
+    <nav>
+        <a href="#">Strona główna</a>
+        <a href="#">Produkty</a>
+        <a href="#" onclick="openCart()">🛒 Koszyk (<span id="cart-count">0</span>)</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Witaj w SilvestaShop!</h1>
+    <p>Przygotuj się na najlepszą noc w roku – wszystko czego potrzebujesz na Sylwestra!</p>
+</section>
+
+<section class="products">
+    <h2>Produkty Sylwestrowe</h2>
+
+    <div class="product-grid">
+
+       <!-- Lampki 1 -->
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=600" alt="Lampki SnowTwinkle">
+    <h3>Lampki LED “SnowTwinkle”</h3>
+    <p class="desc">Delikatne, zimne światło idealne do świąteczno-sylwestrowego klimatu. 8 trybów świecenia.</p>
+    <p class="price">39 zł</p>
+    <button class="btn" onclick="addToCart('Lampki LED SnowTwinkle', 39)">Dodaj do koszyka</button>
+</div>
+
+<!-- Lampki 2 -->
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=600" alt="Lampki GoldStream">
+    <h3>Lampki “GoldStream”</h3>
+    <p class="desc">Złote, ciepłe światełka tworzące wyjątkową atmosferę na imprezach.</p>
+    <p class="price">55 zł</p>
+    <button class="btn" onclick="addToCart('Lampki GoldStream', 55)">Dodaj do koszyka</button>
+</div>
+
+<!-- Lampki 3 -->
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?w=600" alt="Lampki StarRain">
+    <h3>Lampki “StarRain”</h3>
+    <p class="desc">Kurtyna świetlna 300 LED – idealna na tło do zdjęć lub dekorację okna.</p>
+    <p class="price">79 zł</p>
+    <button class="btn" onclick="addToCart('Lampki StarRain', 79)">Dodaj do koszyka</button>
+
+    </div>
+</section>
+
+<!-- Koszyk -->
+<div class="cart-panel" id="cart">
+    <h2>Twój koszyk</h2>
+    <div id="cart-items"></div>
+    <p class="total">Suma: <span id="total-price">0</span> zł</p>
+    <button class="btn close" onclick="closeCart()">Zamknij</button>
+</div>
+
+<footer>
+    <p>© 2025 SilvestaShop. Udanej zabawy sylwestrowej!</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
